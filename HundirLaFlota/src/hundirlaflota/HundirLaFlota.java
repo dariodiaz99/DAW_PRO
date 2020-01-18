@@ -18,6 +18,7 @@ public class HundirLaFlota {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         // Menu del juego
         Scanner sn = new Scanner(System.in);
         boolean salir = false;

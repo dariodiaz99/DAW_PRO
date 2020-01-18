@@ -13,7 +13,12 @@ public class Barco {
     String nombre;
     int tamaño;
     public static int Atacar(String coor){
-        
-    } 
+        for (int x = 0; x < 10; x++) {
+            for (int y = 0; y < 10; y++) {
+               
+            }
+            System.out.println();
+        }
+    }
     
 }
