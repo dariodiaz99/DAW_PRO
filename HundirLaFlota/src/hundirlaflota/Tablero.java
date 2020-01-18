@@ -10,13 +10,29 @@ package hundirlaflota;
  * @author Oscar
  */
 public class Tablero {
+
+    public Tablero(int size, int x, int y) {
+        this.size = size;
+        this.x = x;
+        this.y = y;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
     int size;
     int x;
     int y;
     public static void GenerarTablero(){
     char tablero[][] = new char[12][12];
-    
-   
     
     tablero[1][1] = '~';
     tablero[1][2] = '~';
@@ -46,6 +62,18 @@ public class Tablero {
             }
             System.out.println("|");
         }
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
     }
     public static void main(String[] args) {
         GenerarTablero();

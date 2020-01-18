@@ -18,8 +18,15 @@ public class HundirLaFlota {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Tablero tablero = new Tablero(2,11,11);
         
+        Barco b1 = new Barco("1",1);
+        Barco b2 = new Barco("2",2);
+        Barco b3 = new Barco("1",1);
+        Barco b4 = new Barco("1",1);
         // Menu del juego
+        System.out.println("Bienvenido al Juego de hundir la flota");
+        System.out.println("Vamos a introducir 4 barcos, por favor introduzca los tamaños");
         Scanner sn = new Scanner(System.in);
         boolean salir = false;
         int opcion; //Guardaremos la opcion del usuario
