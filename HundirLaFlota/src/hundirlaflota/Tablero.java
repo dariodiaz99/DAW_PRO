@@ -9,11 +9,6 @@ package hundirlaflota;
  *
  * @author Oscar
  */
-public class Barco {
-    String nombre;
-    int tamaño;
-    public static int Atacar(String coor){
-        
-    } 
+public class Tablero {
     
 }
