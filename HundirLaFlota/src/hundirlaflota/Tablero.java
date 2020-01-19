@@ -3,17 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package hundirlaflota;
 
 import java.util.Scanner;
-
-
 
 /**
  *
  * @author Oscar
  */
+
 public class Tablero {
+    
+    public Tablero(){
+        
+    }
     
     public Tablero(int size, int y, int x) {
         this.size = size;
@@ -58,7 +62,7 @@ public class Tablero {
     
     tablero[1][1] = '~';
     tablero[1][2] = '~';
-    
+   
     //tablero[1][3] = '~';
     
     tablero[2][1] = '~';

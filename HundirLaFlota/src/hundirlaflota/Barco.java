@@ -4,62 +4,16 @@
  * and open the template in the editor.
  */
 package hundirlaflota;
-
-import java.util.Scanner;
-
 /**
  *
  * @author Oscar
  */
 public class Barco {
-    String nombre;
-    int tamaño;
-    private int posicion;
-    
-    public String getNombre() {
-        return nombre;
-    }
-
-    public int getTamaño() {
-        return tamaño;
-    }
+   int tamanio;
+   boolean salud;
    
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public Barco(String nombre, int tamaño) {
-        this.nombre = nombre;
-        this.tamaño = tamaño;
-    }
-
-    public int getPosicion() {
-        return posicion;
-    }
-    
-    public void setPosicion(int posicion) {
-        this.posicion = posicion;
-    }
-    
-    public void setTamaño(int tamaño) {
-        this.tamaño = tamaño;
-    }
-    
-    public static void Atacar(int tamaño, String Barco){
-        Scanner sc = new Scanner(System.in);
-        /*Barco.Atacar(2);
-        for (int x = 0; x < 10; x++) {
-            for (int y = 0; y < 10; y++) {
-               
-            }
-            System.out.println();
-        }*/
-        
-        System.out.println("Introduzca las coordenadas del disparo");
-        int x = sc.nextInt();
-        int y = sc.nextInt();
-        
-    }
-
+   public Barco(int tamanio){
+       this.tamanio = tamanio;
+       this.salud = true;
+   }
 }
