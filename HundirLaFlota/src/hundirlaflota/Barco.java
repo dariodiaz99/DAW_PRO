@@ -13,7 +13,9 @@ import java.util.Scanner;
  */
 public class Barco {
     String nombre;
-
+    int tamaño;
+    private int posicion;
+    
     public String getNombre() {
         return nombre;
     }
@@ -21,7 +23,7 @@ public class Barco {
     public int getTamaño() {
         return tamaño;
     }
-    int tamaño;
+   
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -32,9 +34,18 @@ public class Barco {
         this.tamaño = tamaño;
     }
 
+    public int getPosicion() {
+        return posicion;
+    }
+    
+    public void setPosicion(int posicion) {
+        this.posicion = posicion;
+    }
+    
     public void setTamaño(int tamaño) {
         this.tamaño = tamaño;
     }
+    
     public static void Atacar(int tamaño, String Barco){
         Scanner sc = new Scanner(System.in);
         /*Barco.Atacar(2);
@@ -50,4 +61,5 @@ public class Barco {
         int y = sc.nextInt();
         
     }
+
 }

@@ -5,13 +5,17 @@
  */
 package hundirlaflota;
 
+import java.util.Scanner;
+
+
+
 /**
  *
  * @author Oscar
  */
 public class Tablero {
-
-    public Tablero(int size, int x, int y) {
+    
+    public Tablero(int size, int y, int x) {
         this.size = size;
         this.x = x;
         this.y = y;
@@ -21,46 +25,60 @@ public class Tablero {
         this.size = size;
     }
 
-    public void setX(int x) {
-        this.x = x;
-    }
-
     public void setY(int y) {
         this.y = y;
     }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+    
     int size;
     int x;
     int y;
+    
+    private char colocarBarco(){
+        Scanner sc = new Scanner(System.in);
+        char Posicion = 0;
+        
+        char barco[][] = new char[x][y];
+        System.out.println("Dame las coordenada x");
+        x = sc.next().charAt(x);
+        
+        System.out.println("Dame la coordenada y");
+        y = sc.next().charAt(y);
+        
+        System.out.println("coordenadas = " + x + y);
+        
+        return Posicion;
+    }
+    
     public static void GenerarTablero(){
-    char tablero[][] = new char[12][12];
+    char tablero[][] = new char[11][12];
     
     tablero[1][1] = '~';
     tablero[1][2] = '~';
-  
+    
+    //tablero[1][3] = '~';
+    
     tablero[2][1] = '~';
     tablero[2][2] = '~';
     int num = 0;
     char let= '@';
-        for (int x=0; x < tablero.length; x++) {
-            System.out.print("|"+num);
+        for (char[] tablero1 : tablero) {
+            System.out.print("| "+num);
             num++;
-            for (int y=0; y < tablero[x].length; y++) {
-                System.out.print (tablero[x][y]);
-                  
-           
-                if (y!=tablero[x].length-1){
-                    System.out.print("\t");
+            for (int y = 0; y < tablero1.length; y++) {
+                System.out.print(tablero1[y]);
+                if (y != tablero1.length - 1) {
+                    System.out.print("\t"+"| ");
                     if ( let < 74 && let > 63 ) {
                         let++; 
                         System.out.print(let);
-                         
-                   
-                    
                     }
-                   
                 }
             }
-            System.out.println("|");
+            System.out.println("");
         }
     }
 
@@ -78,4 +96,5 @@ public class Tablero {
     public static void main(String[] args) {
         GenerarTablero();
     }
+    
 }

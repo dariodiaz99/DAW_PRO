@@ -22,8 +22,8 @@ public class HundirLaFlota {
         
         Barco b1 = new Barco("1",1);
         Barco b2 = new Barco("2",2);
-        Barco b3 = new Barco("1",1);
-        Barco b4 = new Barco("1",1);
+        Barco b3 = new Barco("1",3);
+        Barco b4 = new Barco("1",4);
         // Menu del juego
         System.out.println("Bienvenido al Juego de hundir la flota");
         System.out.println("Vamos a introducir 4 barcos, por favor introduzca los tamaños");
@@ -35,8 +35,8 @@ public class HundirLaFlota {
             
             System.out.println("Escribe una de las opciones a elegir");
             
-            System.out.println("1. Insertar Barco 1 (Tamaño: 1)");
-            System.out.println("2. Insertar Barco 2 (Tamaño: 2)");
+            System.out.println("1. Insertar Barco 1 (Tamaño / casillas a ocupar 1)");
+            System.out.println("2. Insertar Barco 2 (Tamaño / casillas a ocupar 2)");
             System.out.println("3. Salir");
  
             try {
@@ -47,9 +47,21 @@ public class HundirLaFlota {
                 switch (opcion) {
                     case 1:
                         System.out.println("Has seleccionado el 1");
+                        //FALTA COLOCAR EL BARCO PARA QUE FUNCIONE
+                       
+                        
+                        
+                        
+                        
                         break;
                     case 2:
                         System.out.println("Has seleccionado el 2");
+                        //FALTA COLOCAR EL BARCO PARA QUE FUNCIONE
+                        
+                        
+                        
+                        
+                        
                         break;
                     case 3:
                         salir = true;
