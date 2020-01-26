@@ -6,7 +6,9 @@
 
 package hundirlaflota;
 
-import java.util.Scanner;
+
+
+
 
 /**
  *
@@ -14,91 +16,51 @@ import java.util.Scanner;
  */
 
 public class Tablero {
+    int tablero[][];
     
-    public Tablero(){
-        
-    }
-    
-    public Tablero(int size, int y, int x) {
-        this.size = size;
-        this.x = x;
-        this.y = y;
+        public Tablero() {
+        tablero = new int[11][11];
     }
 
-    public void setSize(int size) {
-        this.size = size;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-
-    public void setX(int x) {
-        this.x = x;
-    }
-    
-    int size;
-    int x;
-    int y;
-    
-    private char colocarBarco(){
-        Scanner sc = new Scanner(System.in);
-        char Posicion = 0;
+    public void crearTablero() {
+        int i = '~';
+        // mostra la primera fila de numeros del 1 al 10
+        System.out.print( "  | " );
+        for (int x = 1; x < tablero.length; x++) {
+            System.out.print( x + " " + " ");
+        }
+        //
         
-        char barco[][] = new char[x][y];
-        System.out.println("Dame las coordenada x");
-        x = sc.next().charAt(x);
+        // divisor de numeros horizontales con el mapa
+        System.out.print("| \n");
+        for (int x = 1; x < tablero.length + 4; x++) {
+            System.out.print("--");
+        }
+        //
         
-        System.out.println("Dame la coordenada y");
-        y = sc.next().charAt(y);
-        
-        System.out.println("coordenadas = " + x + y);
-        
-        return Posicion;
-    }
-    
-    public static void GenerarTablero(){
-    char tablero[][] = new char[11][12];
-    
-    tablero[1][1] = '~';
-    tablero[1][2] = '~';
-   
-    //tablero[1][3] = '~';
-    
-    tablero[2][1] = '~';
-    tablero[2][2] = '~';
-    int num = 0;
-    char let= '@';
-        for (char[] tablero1 : tablero) {
-            System.out.print("| "+num);
-            num++;
-            for (int y = 0; y < tablero1.length; y++) {
-                System.out.print(tablero1[y]);
-                if (y != tablero1.length - 1) {
-                    System.out.print("\t"+"| ");
-                    if ( let < 74 && let > 63 ) {
-                        let++; 
-                        System.out.print(let);
-                    }
+        System.out.println("");
+        for (int x = 1; x < 11; x++) {
+            int[] is = tablero[x];
+            System.out.print( x + " |" + " ");
+            for (int y = 1; y < 11; y++) {
+                switch (tablero[x][y]) {
+                    default:
+                        System.out.print("~" + " " + " ");
+                        break;
                 }
             }
-            System.out.println("");
+            System.out.print("| \n");
+            System.out.println(" ");
         }
-    }
+        
 
-    public int getSize() {
-        return size;
+        // divisor final del mapa
+        
+        for (int x = 1; x < tablero.length + 4; x++) {
+            System.out.print("--");
+        }
+        System.out.println("");
     }
-
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
-    public static void main(String[] args) {
-        GenerarTablero();
-    }
-    
+       //
 }
+

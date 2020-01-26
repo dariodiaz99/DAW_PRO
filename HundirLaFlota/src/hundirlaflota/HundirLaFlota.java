@@ -18,7 +18,7 @@ public class HundirLaFlota {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Tablero tablero = new Tablero(2,11,11);
+        
         
         // Menu del juego
         System.out.println("Bienvenido al Juego de hundir la flota");
@@ -31,9 +31,13 @@ public class HundirLaFlota {
             
             System.out.println("Escribe una de las opciones a elegir");
             
-            System.out.println("1. Insertar Barco 1 (Tamaño / casillas a ocupar 1)");
-            System.out.println("2. Insertar Barco 2 (Tamaño / casillas a ocupar 2)");
-            System.out.println("3. Salir");
+            System.out.println("1. Mostrar Tablero/Mapa");
+            System.out.println("2. Insertar Barco 1 (Tamaño / casillas a ocupar 1)");
+            System.out.println("3. Insertar Barco 2 (Tamaño / casillas a ocupar 2");
+            System.out.println("4. Insertar Barco 3 (Tamaño / casillas a ocupar 3");
+            System.out.println("5. Insertar Barco 1 (Tamaño / casillas a ocupar 4");
+            System.out.println("6. Insertar Barco 1 (Tamaño / casillas a ocupar 5");
+            System.out.println("7. Salir");
  
             try {
  
@@ -43,23 +47,34 @@ public class HundirLaFlota {
                 switch (opcion) {
                     case 1:
                         System.out.println("Has seleccionado el 1");
-                        //FALTA COLOCAR EL BARCO PARA QUE FUNCIONE
-                       
-                        
-                        
-                        
-                        
+                            Tablero tablero = new Tablero();
+                            tablero.crearTablero();
                         break;
                     case 2:
                         System.out.println("Has seleccionado el 2");
                         //FALTA COLOCAR EL BARCO PARA QUE FUNCIONE
                         
-                        
-                        
-                        
+                    case 3:
+                        System.out.println("Has seleccionado el 2");
+                        //FALTA COLOCAR EL BARCO PARA QUE FUNCIONE
                         
                         break;
-                    case 3:
+                    case 4:
+                        System.out.println("Has seleccionado el 2");
+                        //FALTA COLOCAR EL BARCO PARA QUE FUNCIONE
+                        
+                        break;
+                    case 5:
+                        System.out.println("Has seleccionado el 2");
+                        //FALTA COLOCAR EL BARCO PARA QUE FUNCIONE
+                        
+                        break;
+                    case 6:
+                        System.out.println("Has seleccionado el 2");
+                        //FALTA COLOCAR EL BARCO PARA QUE FUNCIONE
+                        
+                        break;
+                    case 7:
                         salir = true;
                         break;
                     default:
@@ -75,4 +90,4 @@ public class HundirLaFlota {
  
     }
 }
- 
+

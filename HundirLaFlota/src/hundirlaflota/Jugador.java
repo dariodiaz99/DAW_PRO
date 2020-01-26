@@ -20,9 +20,9 @@ public class Jugador {
     }
     
     public void addBarco(){
-       jugador.addBarco(4);
-       jugador.addBarco(3);
-       jugador.addBarco(2);
-       jugador.addBarco(5);
+      // jugador.addBarco(4);
+      // jugador.addBarco(3);
+      // jugador.addBarco(2);
+      // jugador.addBarco(5);
     }
 }
