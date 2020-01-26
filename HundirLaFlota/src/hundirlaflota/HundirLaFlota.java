@@ -33,10 +33,10 @@ public class HundirLaFlota {
             
             System.out.println("1. Mostrar Tablero/Mapa");
             System.out.println("2. Insertar Barco 1 (Tamaño / casillas a ocupar 1)");
-            System.out.println("3. Insertar Barco 2 (Tamaño / casillas a ocupar 2");
-            System.out.println("4. Insertar Barco 3 (Tamaño / casillas a ocupar 3");
-            System.out.println("5. Insertar Barco 4 (Tamaño / casillas a ocupar 4");
-            System.out.println("6. Insertar Barco 5 (Tamaño / casillas a ocupar 5");
+            System.out.println("3. Insertar Barco 2 (Tamaño / casillas a ocupar 2)");
+            System.out.println("4. Insertar Barco 3 (Tamaño / casillas a ocupar 3)");
+            System.out.println("5. Insertar Barco 4 (Tamaño / casillas a ocupar 4)");
+            System.out.println("6. Insertar Barco 5 (Tamaño / casillas a ocupar 5)");
             System.out.println("7. Salir");
  
             try {
