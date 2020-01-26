@@ -4,60 +4,33 @@
  * and open the template in the editor.
  */
 package hundirlaflota;
+
+import java.util.Scanner;
+
 /**
  *
  * @author Oscar
  */
 public class Barco {
-   int tamanio;
-   boolean salud;
-   
-   public Barco(int tamanio){
-       this.tamanio = tamanio;
-       this.salud = true;
+   public void colocarBarco1(int tablero[][]){
+       Scanner sc = new Scanner(System.in);
+       boolean barco1 = false;
+       
+       while (!barco1) {
+           System.out.print("Dame la coordenada X: ");
+           int x = sc.nextInt();
+           
+           System.out.println("Dame la coordenada Y: ");
+           int y = sc.nextInt();
+           
+           if ( 0 <= x && y <= 10){
+               barco1 = true;
+               tablero[y][x] = 1;
+           }else{
+               System.out.println("Vuelve a introducir otras coordenadas diferentes a las anteriores");
+               barco1 = false;
+           }
+           
+       }
    }
-   
-   public static void colocarBarco(int medida) {
-
-
-       int yIni = (int) (Math.random() * Tablero.yMax); //xIni e yIni es desde donde parte el barco.
-        int xIni = (int) (Math.random() * Tablero.xMax);
-
-        for (int k = 0; k < medida; k++) {
-            if (!Tablero.tabla[yIni][xIni].contenido) {
-                Tablero.tabla[yIni][xIni].forma = '*';
-                Tablero.tabla[yIni][xIni].contenido = true;
-                //posicionesOcupadas = new int[yIni][xIni];
-            } else {
-                k--;
-            }
-        }
-    }
-   
-   private int medida;
-
-    enum barcos {
-        portaaviones, buque, lancha
-    };
-    private boolean hundido = false;
-    private int[][] posicionesOcupadas;
-    private boolean[][] posicionesHeridas;
-    private int direccion;
-
-
- 
-    public Barco(barcos tipo) {
-        switch (tipo) {
-            case portaaviones:
-                medida = 5;
-                posicionesOcupadas = new int[medida][2];
-                break;
-            case buque:
-                medida = 3;
-                posicionesOcupadas = new int[medida][2];
-            case lancha:
-                medida = 1;
-                posicionesOcupadas = new int[medida][2];
-        }
-    }
 }

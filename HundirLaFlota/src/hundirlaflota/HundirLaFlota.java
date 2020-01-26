@@ -53,7 +53,7 @@ public class HundirLaFlota {
                     case 2:
                         System.out.println("Has seleccionado el 2");
                         //FALTA COLOCAR EL BARCO PARA QUE FUNCIONE
-                        
+                            
                     case 3:
                         System.out.println("Has seleccionado el 2");
                         //FALTA COLOCAR EL BARCO PARA QUE FUNCIONE

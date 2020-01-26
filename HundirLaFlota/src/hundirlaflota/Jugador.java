@@ -5,6 +5,8 @@
  */
 package hundirlaflota;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Dario
@@ -19,10 +21,9 @@ public class Jugador {
         enemigo = new Tablero();
     }
     
-    public void addBarco(){
-      // jugador.addBarco(4);
-      // jugador.addBarco(3);
-      // jugador.addBarco(2);
-      // jugador.addBarco(5);
+    public void barco1() {
+        Barco barco1 = new Barco();
+        Scanner cin = new Scanner(System.in);
+        Barco.colocarBarco1(Tablero.);
     }
 }
