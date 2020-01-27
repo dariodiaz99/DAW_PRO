@@ -12,25 +12,25 @@ import java.util.Scanner;
  * @author Oscar
  */
 public class Barco {
-   public void colocarBarco1(int tablero[][]){
-       Scanner sc = new Scanner(System.in);
-       boolean barco1 = false;
+   public void colocarLancha(Scanner sn, int tablero[][]){
        
-       while (!barco1) {
+       boolean lancha = false;
+       
+       while (!lancha) {
            System.out.print("Dame la coordenada X: ");
-           int x = sc.nextInt();
+           int x = sn.nextInt();
+           System.out.print("Dame la coordenada y: ");
+           int y = sn.nextInt();
            
-           System.out.println("Dame la coordenada Y: ");
-           int y = sc.nextInt();
-           
-           if ( 0 <= x && y <= 10){
-               barco1 = true;
+           if ( x < 10 && y < 10 && x >= 0 && y >= 0){
+               lancha = true;
                tablero[y][x] = 1;
            }else{
                System.out.println("Vuelve a introducir otras coordenadas diferentes a las anteriores");
-               barco1 = false;
+               lancha = false;
            }
            
        }
    }
+
 }

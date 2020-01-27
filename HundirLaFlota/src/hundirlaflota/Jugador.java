@@ -13,17 +13,25 @@ import java.util.Scanner;
  */
 public class Jugador {
     
-    Tablero jugador;
-    Tablero enemigo;
+    Tablero tablero = new Tablero();
+    private int barco;
     
     public Jugador(){
-        jugador = new Tablero();
-        enemigo = new Tablero();
+        this.barco = 6;
+
     }
     
-    public void barco1() {
-        Barco barco1 = new Barco();
-        Scanner cin = new Scanner(System.in);
-        Barco.colocarBarco1(Tablero.);
+    public int getBarco(){
+        return barco;
+    }
+    
+    public void mostrarTablero() {
+        tablero.crearTablero();
+    }
+    
+    public void lancha() {
+        Barco lancha = new Barco();
+        Scanner sn = new Scanner(System.in);
+        lancha.colocarLancha(sn, tablero.tablero);
     }
 }

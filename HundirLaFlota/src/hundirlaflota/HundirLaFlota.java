@@ -19,12 +19,16 @@ public class HundirLaFlota {
      */
     public static void main(String[] args) {
         
+        Jugador jugador1 = new Jugador();
+        Jugador jugadorIA = new Jugador();
         
+        jugadorIA.mostrarTablero();
         // Menu del juego
         System.out.println("Bienvenido al Juego de hundir la flota");
-        System.out.println("Vamos a introducir 4 barcos, por favor introduzca los tamaños");
+       
         Scanner sn = new Scanner(System.in);
         boolean salir = false;
+        
         int opcion; //Guardaremos la opcion del usuario
  
         while (!salir) { //Mientras sea distinto a salir hacer lo siguiente
@@ -47,13 +51,14 @@ public class HundirLaFlota {
                 switch (opcion) {
                     case 1:
                         System.out.println("Has seleccionado el 1");
-                            Tablero tablero = new Tablero();
-                            tablero.crearTablero();
+                        Tablero tablero = new Tablero();
+                        tablero.crearTablero();
                         break;
                     case 2:
                         System.out.println("Has seleccionado el 2");
                         //FALTA COLOCAR EL BARCO PARA QUE FUNCIONE
-                            
+                        jugador1.lancha();
+                        break;
                     case 3:
                         System.out.println("Has seleccionado el 2");
                         //FALTA COLOCAR EL BARCO PARA QUE FUNCIONE

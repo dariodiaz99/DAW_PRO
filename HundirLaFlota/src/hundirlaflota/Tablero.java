@@ -18,12 +18,12 @@ package hundirlaflota;
 public class Tablero {
     int tablero[][];
     
-        public Tablero() {
+    public Tablero() {
         tablero = new int[11][11];
     }
 
     public void crearTablero() {
-        int i = '~';
+        int i = 0;
         // mostra la primera fila de numeros del 1 al 10
         System.out.print( "  | " );
         for (int x = 1; x < tablero.length; x++) {
@@ -33,7 +33,7 @@ public class Tablero {
         
         // divisor de numeros horizontales con el mapa
         System.out.print("| \n");
-        for (int x = 1; x < tablero.length + 4; x++) {
+        for (int x = 0; x < tablero.length + 4; x++) {
             System.out.print("--");
         }
         //
@@ -44,8 +44,16 @@ public class Tablero {
             System.out.print( x + " |" + " ");
             for (int y = 1; y < 11; y++) {
                 switch (tablero[x][y]) {
+                    case 1:
+                    case 2:
+                    case 3:
+                        System.out.print(tablero[x][y] + " ");
+                        break;
+                    case 8:
+                        System.out.print(tablero[x][y] + " ");
+                        break;
                     default:
-                        System.out.print("~" + " " + " ");
+                        System.out.print(tablero[x][y] + " " + " ");
                         break;
                 }
             }
@@ -56,7 +64,7 @@ public class Tablero {
 
         // divisor final del mapa
         
-        for (int x = 1; x < tablero.length + 4; x++) {
+        for (int x = 0; x < tablero.length + 4; x++) {
             System.out.print("--");
         }
         System.out.println("");
