@@ -32,6 +32,6 @@ public class Jugador {
     public void lancha() {
         Barco lancha = new Barco();
         Scanner sn = new Scanner(System.in);
-        lancha.colocarLancha(sn, tablero.tablero);
+        String[][] tablero1 = tablero.tablero;
     }
 }

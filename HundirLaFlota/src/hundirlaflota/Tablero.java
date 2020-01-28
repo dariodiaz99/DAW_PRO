@@ -16,55 +16,58 @@ package hundirlaflota;
  */
 
 public class Tablero {
-    int tablero[][];
+    String tablero[][];
     
     public Tablero() {
-        tablero = new int[11][11];
+        tablero = new String[11][11];
+//        for (int i = 0; i < tablero.length; i++) {
+//            //String[] strings = tablero[i];
+//            for (int j = 0; j < 10; j++) {
+//               tablero[i][j] = "~"; 
+//            }
+//        }
     }
 
     public void crearTablero() {
-        int i = 0;
+        
         // mostra la primera fila de numeros del 1 al 10
         System.out.print( "  | " );
-        for (int x = 1; x < tablero.length; x++) {
-            System.out.print( x + " " + " ");
+        for (int x = 1; x < tablero.length;x++) {
+            if (x == 1) {
+                System.out.print( x + " " + " " + " " ); 
+            }else{
+                System.out.print( x + " " + " " + " "); 
+            }
+            
         }
         //
         
         // divisor de numeros horizontales con el mapa
         System.out.print("| \n");
-        for (int x = 0; x < tablero.length + 4; x++) {
+        for (int x = 0; x < tablero.length * 2; x++) {
             System.out.print("--");
         }
-        //
-        
         System.out.println("");
-        for (int x = 1; x < 11; x++) {
-            int[] is = tablero[x];
-            System.out.print( x + " |" + " ");
-            for (int y = 1; y < 11; y++) {
-                switch (tablero[x][y]) {
-                    case 1:
-                    case 2:
-                    case 3:
-                        System.out.print(tablero[x][y] + " ");
-                        break;
-                    case 8:
-                        System.out.print(tablero[x][y] + " ");
-                        break;
-                    default:
-                        System.out.print(tablero[x][y] + " " + " ");
-                        break;
+        //
+        //mostrar mapa
+            for (int i = 1; i < tablero.length; i++) {
+            //String[] strings = tablero[i];
+                if (i < 10) {
+                    System.out.print(i + " | ");
+                }else{
+                    System.out.print(i + "| ");
                 }
+                
+            for (int j = 0; j < 10; j++) {
+               tablero[i][j] = "~";
+                System.out.print(tablero[i][j] + "  " + " ");
             }
-            System.out.print("| \n");
-            System.out.println(" ");
+                System.out.println("");
         }
-        
 
         // divisor final del mapa
         
-        for (int x = 0; x < tablero.length + 4; x++) {
+        for (int x = 0; x < tablero.length * 2; x++) {
             System.out.print("--");
         }
         System.out.println("");
