@@ -17,6 +17,10 @@ package hundirlaflota;
 
 public class Tablero {
     String tablero[][];
+    Barco barco = new Barco();
+
+    
+    
     
     public Tablero() {
         tablero = new String[11][11];
@@ -58,7 +62,7 @@ public class Tablero {
                     System.out.print(i + "| ");
                 }
                 
-            for (int j = 0; j < 10; j++) {
+            for (int j = 1; j < 10; j++) {
                tablero[i][j] = "~";
                 System.out.print(tablero[i][j] + "  " + " ");
             }
@@ -72,6 +76,160 @@ public class Tablero {
         }
         System.out.println("");
     }
+    
+    public void mostrarTablero(){
+         System.out.print( "  | " );
+        for (int x = 1; x < tablero.length;x++) {
+            if (x == 1) {
+                System.out.print( x + " " + " " + " " ); 
+            }else{
+                System.out.print( x + " " + " " + " "); 
+            }
+            
+        }
+        //
+        
+        // divisor de numeros horizontales con el mapa
+        System.out.print("| \n");
+        for (int x = 0; x < tablero.length * 2; x++) {
+            System.out.print("--");
+        }
+        System.out.println("");
+        //
+        //mostrar mapa
+            for (int i = 1; i < tablero.length; i++) {
+            //String[] strings = tablero[i];
+                if (i < 10) {
+                    System.out.print(i + " | ");
+                }else{
+                    System.out.print(i + "| ");
+                }
+                
+            for (int j = 1; j < 10; j++) {
+                System.out.print(tablero[i][j] + "  " + " ");
+            }
+                System.out.println("");
+        }
+    }
+    
+      public void crearTableroEnemigo() {
+        
+        // mostra la primera fila de numeros del 1 al 10
+        System.out.print( "  | " );
+        for (int x = 1; x < tablero.length;x++) {
+            if (x == 1) {
+                System.out.print( x + " " + " " + " " ); 
+            }else{
+                System.out.print( x + " " + " " + " "); 
+            }
+            
+        }
+        //
+        
+        // divisor de numeros horizontales con el mapa
+        System.out.print("| \n");
+        for (int x = 0; x < tablero.length * 2; x++) {
+            System.out.print("--");
+        }
+        System.out.println("");
+        //
+        //mostrar mapa
+            for (int i = 1; i < tablero.length; i++) {
+            //String[] strings = tablero[i];
+                if (i < 10) {
+                    System.out.print(i + " | ");
+                }else{
+                    System.out.print(i + "| ");
+                }
+                
+            for (int j = 1; j < 10; j++) {
+               tablero[i][j] = "~";
+                System.out.print(tablero[i][j] + "  " + " ");
+            }
+                System.out.println("");
+        }
+
+        // divisor final del mapa
+        
+        for (int x = 0; x < tablero.length * 2; x++) {
+            System.out.print("--");
+        }
+        System.out.println("");
+    }
+    
+     public void mostrarTableroEnemigo(){
+         System.out.print( "  | " );
+        for (int x = 1; x < tablero.length;x++) {
+            if (x == 1) {
+                System.out.print( x + " " + " " + " " ); 
+            }else{
+                System.out.print( x + " " + " " + " "); 
+            }
+            
+        }
+        //
+        
+        // divisor de numeros horizontales con el mapa
+        System.out.print("| \n");
+        for (int x = 0; x < tablero.length * 2; x++) {
+            System.out.print("--");
+        }
+        System.out.println("");
+        //
+        //mostrar mapa
+            for (int i = 1; i < tablero.length; i++) {
+            //String[] strings = tablero[i];
+                if (i < 10) {
+                    System.out.print(i + " | ");
+                }else{
+                    System.out.print(i + "| ");
+                }
+                
+            for (int j = 1; j < 10; j++) {
+                System.out.print(tablero[i][j] + "  " + " ");
+            }
+                System.out.println("");
+        }
+    }  
+      
+//    public void mostrarTableroEnemigo(){
+//                 System.out.print( "  | " );
+//        for (int x = 1; x < tablero.length;x++) {
+//            if (x == 1) {
+//                System.out.print( x + " " + " " + " " ); 
+//            }else{
+//                System.out.print( x + " " + " " + " "); 
+//            }
+//            
+//        }
+//        //
+//        
+//        // divisor de numeros horizontales con el mapa
+//        System.out.print("| \n");
+//        for (int x = 0; x < tablero.length * 2; x++) {
+//            System.out.print("--");
+//        }
+//        System.out.println("");
+//        //
+//        //mostrar mapa
+//            for (int i = 1; i < tablero.length; i++) {
+//            //String[] strings = tablero[i];
+//                if (i < 10) {
+//                    System.out.print(i + " | ");
+//                }else{
+//                    System.out.print(i + "| ");
+//                }
+//                
+//            for (int j = 1; j < 10; j++) {
+//                //if (tablero[i][j] != "~" && tablero[i][j] != "X") {
+//                    //System.out.println(tablero[i][j]="~");
+//                //}
+//                System.out.print(tablero[i][j] + "  " + " ");
+//            }
+//                System.out.println("");
+//        }
+//    }
+    
        //
 }
 

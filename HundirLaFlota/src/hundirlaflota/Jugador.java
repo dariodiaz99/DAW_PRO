@@ -12,26 +12,14 @@ import java.util.Scanner;
  * @author Dario
  */
 public class Jugador {
+    //private int barco;
     
-    Tablero tablero = new Tablero();
-    private int barco;
-    
-    public Jugador(){
-        this.barco = 6;
+    //public Jugador(){
+        //this.barco = 6;
 
-    }
+    //}
     
-    public int getBarco(){
-        return barco;
-    }
-    
-    public void mostrarTablero() {
-        tablero.crearTablero();
-    }
-    
-    public void lancha() {
-        Barco lancha = new Barco();
-        Scanner sn = new Scanner(System.in);
-        String[][] tablero1 = tablero.tablero;
-    }
+    //public int getBarco(){
+        //return barco;
+    //}
 }

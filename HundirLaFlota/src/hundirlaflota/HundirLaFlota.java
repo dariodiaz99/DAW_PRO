@@ -6,6 +6,7 @@
 package hundirlaflota;
 
 import java.util.InputMismatchException;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -20,12 +21,17 @@ public class HundirLaFlota {
     public static void main(String[] args) {
         
         Jugador jugador1 = new Jugador();
-        Jugador jugadorIA = new Jugador();
+        Jugador jugadorEnemigo = new Jugador();
         
-        jugadorIA.mostrarTablero();
+        Barco barco1 = new Barco();
+        
+        Tablero tablero = new Tablero();
+        Tablero tableroEnemigo = new Tablero();
+        //jugadorIA.mostrarTablero();
+        
         // Menu del juego
         System.out.println("Bienvenido al Juego de hundir la flota");
-       
+        Random rnd = new Random();
         Scanner sn = new Scanner(System.in);
         boolean salir = false;
         
@@ -51,31 +57,38 @@ public class HundirLaFlota {
                 switch (opcion) {
                     case 1:
                         System.out.println("Has seleccionado el 1");
-                        Tablero tablero = new Tablero();
                         tablero.crearTablero();
+                        System.out.print("\n" + "Tablero enemigo" + "\n");
+                        tableroEnemigo.crearTableroEnemigo();
                         break;
                     case 2:
                         System.out.println("Has seleccionado el 2");
                         //FALTA COLOCAR EL BARCO PARA QUE FUNCIONE
-                        jugador1.lancha();
-                        break;
-                    case 3:
-                        System.out.println("Has seleccionado el 2");
-                        //FALTA COLOCAR EL BARCO PARA QUE FUNCIONE
+                        barco1.colocarLancha(sn, tablero);
+                        tablero.mostrarTablero();
+                        System.out.print("\n" + "Tablero enemigo" + "\n");
+                        barco1.colocarLanchaEnemigo(rnd, tablero);
+                        tableroEnemigo.mostrarTableroEnemigo();
                         
                         break;
+                    case 3:
+                        System.out.println("Has seleccionado el 3");
+                        //FALTA COLOCAR EL BARCO PARA QUE FUNCIONE
+                        barco1.colocarSubmarino(sn, tablero);
+                        tablero.mostrarTablero();
+                        break;
                     case 4:
-                        System.out.println("Has seleccionado el 2");
+                        System.out.println("Has seleccionado el 4");
                         //FALTA COLOCAR EL BARCO PARA QUE FUNCIONE
                         
                         break;
                     case 5:
-                        System.out.println("Has seleccionado el 2");
+                        System.out.println("Has seleccionado el 5");
                         //FALTA COLOCAR EL BARCO PARA QUE FUNCIONE
                         
                         break;
                     case 6:
-                        System.out.println("Has seleccionado el 2");
+                        System.out.println("Has seleccionado el 6");
                         //FALTA COLOCAR EL BARCO PARA QUE FUNCIONE
                         
                         break;
