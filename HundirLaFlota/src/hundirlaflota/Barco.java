@@ -34,7 +34,7 @@ public class Barco {
            int y = sn.nextInt();
            
            if (tablero.tablero[y][x] != "~") {
-               System.out.println("PENE");
+               System.out.println("Dario hijoputa");
                lancha = true;
            }else{
            if ( x < 10 && y < 10 && x >= 0 && y >= 0 ){
