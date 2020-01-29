@@ -17,6 +17,7 @@ package hundirlaflota;
 
 public class Tablero {
     String tablero[][];
+    //String tableroEnemigo[][];
     Barco barco = new Barco();
 
     
@@ -24,6 +25,8 @@ public class Tablero {
     
     public Tablero() {
         tablero = new String[11][11];
+        
+        //tableroEnemigo = new String[11][11];
 //        for (int i = 0; i < tablero.length; i++) {
 //            //String[] strings = tablero[i];
 //            for (int j = 0; j < 10; j++) {
@@ -62,7 +65,7 @@ public class Tablero {
                     System.out.print(i + "| ");
                 }
                 
-            for (int j = 1; j < 10; j++) {
+            for (int j = 1; j < tablero.length; j++) {
                tablero[i][j] = "~";
                 System.out.print(tablero[i][j] + "  " + " ");
             }
@@ -105,7 +108,7 @@ public class Tablero {
                     System.out.print(i + "| ");
                 }
                 
-            for (int j = 1; j < 10; j++) {
+            for (int j = 1; j < tablero.length; j++) {
                 System.out.print(tablero[i][j] + "  " + " ");
             }
                 System.out.println("");
@@ -142,7 +145,7 @@ public class Tablero {
                     System.out.print(i + "| ");
                 }
                 
-            for (int j = 1; j < 10; j++) {
+            for (int j = 1; j < tablero.length; j++) {
                tablero[i][j] = "~";
                 System.out.print(tablero[i][j] + "  " + " ");
             }
@@ -185,7 +188,7 @@ public class Tablero {
                     System.out.print(i + "| ");
                 }
                 
-            for (int j = 1; j < 10; j++) {
+            for (int j = 1; j < tablero.length; j++) {
                 System.out.print(tablero[i][j] + "  " + " ");
             }
                 System.out.println("");
