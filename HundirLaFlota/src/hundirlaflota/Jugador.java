@@ -130,14 +130,14 @@ public class Jugador {
             tablero.tablero[y][x] = "X";
             tocado = true;
             
-            while (tocado = true) {
-                if (tablero.tablero[y--][x] == "3" || tablero.tablero[y--][x] == "4" || tablero.tablero[y--][x] == "5") {
-                    System.out.println("Tocado!");
-                } else{
-                    System.out.println("Agua!");
-                    tablero.tablero[y--][x] = "A";
-                }
-            }
+            //while (tocado = true) {
+            //    if (tablero.tablero[y--][x] == "3" || tablero.tablero[y--][x] == "4" || tablero.tablero[y--][x] == "5") {
+            //        System.out.println("Tocado!");
+            //    } else{
+            //        System.out.println("Agua!");
+            //        tablero.tablero[y--][x] = "A";
+            //    }
+            //}
             
                 if (tablero.tablero[y][x] == "3") {
                     saludBarco3Enemigo--;
