@@ -7,6 +7,7 @@ package hundirlaflota;
 
 import java.util.Random;
 import java.util.Scanner;
+import sun.security.jgss.krb5.Krb5Util;
 
 /**
  *
@@ -17,9 +18,15 @@ public class Jugador {
     Scanner sc = new Scanner(System.in);
     Tablero tablero = new Tablero();
     
+    int saludBarco1 = 1;
     int saludBarco3 = 3;
     int saludBarco4 = 4;
     int saludBarco5 = 5;
+    
+    int saludBarco1Enemigo = 1;
+    int saludBarco3Enemigo = 3;
+    int saludBarco4Enemigo = 4;
+    int saludBarco5Enemigo = 5;
     
     public void Disparar(int x, int y, Tablero tablero) {
         boolean repeticion = false;
@@ -45,13 +52,37 @@ public class Jugador {
 
             }
             if (tablero.tablero[y][x] == "1") {
-                System.out.println("Hundido");
-                tablero.tablero[y][x] = "X";
+                saludBarco1 --;
+                if (saludBarco1 == 0) {
+                   System.out.println("Hundido");
+                    tablero.tablero[y][x] = "X"; 
+                }
+                //System.out.println("Hundido");
+                //tablero.tablero[y][x] = "X";
                 //System.out.print(tablero.tablero[y][x] = "X");
 
             } else if (tablero.tablero[y][x] == "3" || tablero.tablero[y][x] == "4" || tablero.tablero[y][x] == "5") {
                 System.out.println("Tocado!");
-                tablero.tablero[y][x] = "*";
+                tablero.tablero[y][x] = "X";
+                
+                if (tablero.tablero[y][x] == "3") {
+                    saludBarco3--;
+                    if(saludBarco3 == 0){
+                        System.out.println("Hundido");
+                        //tablero.tablero[y][x] = "X";
+                    }
+                }else if(tablero.tablero[y][x] == "4"){
+                    saludBarco4--;
+                    if (saludBarco4 == 0) {
+                        System.out.println("Hundido");
+                    }
+                }else if(tablero.tablero[y][x] == "5"){
+                    saludBarco5--;
+                    if (saludBarco5 == 0) {
+                        System.out.println("Hundido");
+                    }
+                }
+               
                 //System.out.println(tablero.tablero[y][x] = "*");
 
             }
@@ -62,6 +93,7 @@ public class Jugador {
     public void DisparoEnemigo(int x, int y, Tablero tablero) {
         System.out.println("¿Donde quieres disparar?");
         Random rnd = new Random();
+        boolean tocado = false;
         boolean repeticion1 = false;
 
         System.out.print("Dame la coordenada X: ");
@@ -81,13 +113,49 @@ public class Jugador {
 
         //System.out.print(tablero.tablero[y][x]);
         if (tablero.tablero[y][x] == "1") {
-            System.out.println("Hundido");
-            tablero.tablero[y][x] = "X";
+            saludBarco1Enemigo --;
+            if (saludBarco1Enemigo == 0) {
+                System.out.println("Hundido");
+                tablero.tablero[y][x] = "X"; 
+            }
+
+            //System.out.println("Hundido");
+            //tablero.tablero[y][x] = "X";
             //System.out.print(tablero.tablero[y][x] = "X");
 
         } else if (tablero.tablero[y][x] == "3" || tablero.tablero[y][x] == "4" || tablero.tablero[y][x] == "5") {
+            
+  
             System.out.println("Tocado!");
-            tablero.tablero[y][x] = "*";
+            tablero.tablero[y][x] = "X";
+            tocado = true;
+            
+            while (tocado = true) {
+                if (tablero.tablero[y--][x] == "3" || tablero.tablero[y--][x] == "4" || tablero.tablero[y--][x] == "5") {
+                    System.out.println("Tocado!");
+                } else{
+                    System.out.println("Agua!");
+                    tablero.tablero[y--][x] = "A";
+                }
+            }
+            
+                if (tablero.tablero[y][x] == "3") {
+                    saludBarco3Enemigo--;
+                    if(saludBarco3Enemigo == 0){
+                        System.out.println("Hundido");
+                        //tablero.tablero[y][x] = "X";
+                    }
+                }else if(tablero.tablero[y][x] == "4"){
+                    saludBarco4Enemigo--;
+                    if (saludBarco4Enemigo == 0) {
+                        System.out.println("Hundido");
+                    }
+                }else if(tablero.tablero[y][x] == "5"){
+                    saludBarco5Enemigo--;
+                    if (saludBarco5Enemigo == 0) {
+                        System.out.println("Hundido");
+                    }
+                }
             //System.out.println(tablero.tablero[y][x] = "*");
 
         }

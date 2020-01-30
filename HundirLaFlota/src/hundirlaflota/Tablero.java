@@ -162,13 +162,8 @@ public class Tablero {
     
      public void mostrarTableroEnemigo(){
          System.out.print( "  | " );
-        for (int x = 1; x < tablero.length;x++) {
-            if (x == 1) {
+        for (int x = 1; x < tablero.length; x++) {
                 System.out.print( x + " " + " " + " " ); 
-            }else{
-                System.out.print( x + " " + " " + " "); 
-            }
-            
         }
         //
         
@@ -179,6 +174,7 @@ public class Tablero {
         }
         System.out.println("");
         //
+        
         //mostrar mapa
             for (int i = 1; i < tablero.length; i++) {
             //String[] strings = tablero[i];
@@ -189,50 +185,13 @@ public class Tablero {
                 }
                 
             for (int j = 1; j < tablero.length; j++) {
-                System.out.print(tablero[i][j] + "  " + " ");
-            }
+                if (tablero[i][j] != "~" && tablero[i][j] != "X" && tablero[i][j] != "*" && tablero[i][j] != "A") {
+                    System.out.print("~" + " " + " " + " ");
+                }else{
+                    System.out.print(tablero[i][j] + " " + " " + " ");
+                }
+            }    
                 System.out.println("");
         }
     }  
-      
-//    public void mostrarTableroEnemigo(){
-//                 System.out.print( "  | " );
-//        for (int x = 1; x < tablero.length;x++) {
-//            if (x == 1) {
-//                System.out.print( x + " " + " " + " " ); 
-//            }else{
-//                System.out.print( x + " " + " " + " "); 
-//            }
-//            
-//        }
-//        //
-//        
-//        // divisor de numeros horizontales con el mapa
-//        System.out.print("| \n");
-//        for (int x = 0; x < tablero.length * 2; x++) {
-//            System.out.print("--");
-//        }
-//        System.out.println("");
-//        //
-//        //mostrar mapa
-//            for (int i = 1; i < tablero.length; i++) {
-//            //String[] strings = tablero[i];
-//                if (i < 10) {
-//                    System.out.print(i + " | ");
-//                }else{
-//                    System.out.print(i + "| ");
-//                }
-//                
-//            for (int j = 1; j < 10; j++) {
-//                //if (tablero[i][j] != "~" && tablero[i][j] != "X") {
-//                    //System.out.println(tablero[i][j]="~");
-//                //}
-//                System.out.print(tablero[i][j] + "  " + " ");
-//            }
-//                System.out.println("");
-//        }
-//    }
-    
-       //
 }
-
