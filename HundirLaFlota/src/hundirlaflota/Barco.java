@@ -34,9 +34,10 @@ public class Barco {
            int y = sn.nextInt();
            
            if (tablero.tablero[y][x] != "~") {
-               System.out.println("Dario hijoputa");
+               System.out.println("COORDENADAS REPETIDAS POR EL BARCO: " + tablero.tablero[y][x]);
                lancha = true;
            }else{
+               
            if ( x < 10 && y < 10 && x >= 0 && y >= 0 ){
                lancha = true;
                System.out.println(x);
@@ -119,7 +120,10 @@ public class Barco {
            System.out.print("Dame la coordenada y: ");
            int y = sn.nextInt();
            
-           
+            if (tablero.tablero[y][x] != "~") {
+               System.out.println("COORDENADAS REPETIDAS POR EL BARCO: " + tablero.tablero[y][x]);
+               lancha = true;
+           }else{
            if ( x < 10 && y < 10 && x >= 0 && y >= 0){
                lancha = true;
                System.out.println("Dame la direccion la cual quieres colocarlo H=Horizontal / V=Vertical");
@@ -159,7 +163,8 @@ public class Barco {
            }else{
                System.out.println("Vuelve a introducir otras coordenadas diferentes a las anteriores");
                lancha = false;
-           }   
+           }
+       }
        } 
    }
    
@@ -174,7 +179,10 @@ public class Barco {
            System.out.print("Dame la coordenada y: ");
            int y = sn.nextInt();
            
-           
+           if (tablero.tablero[y][x] != "~") {
+               System.out.println("COORDENADAS REPETIDAS POR EL BARCO: " + tablero.tablero[y][x]);
+               lancha = true;
+           }else{
            if ( x < 10 && y < 10 && x >= 0 && y >= 0){
                lancha = true;
                System.out.println("Dame la direccion la cual quieres colocarlo H=Horizontal / V=Vertical");
@@ -216,7 +224,8 @@ public class Barco {
            }else{
                System.out.println("Vuelve a introducir otras coordenadas diferentes a las anteriores");
                lancha = false;
-           }   
+           }
+        }
        } 
    }
       
@@ -235,16 +244,20 @@ public class Barco {
            System.out.println("Dame la coordenada y: ");
            int y = rnd.nextInt(9)+1;
            
-           
-           if ( x < 10 && y < 10 && x >= 0 && y >= 0 ){
+           if (tablero.tablero[y][x] != "~") {
+               System.out.println("COORDENADAS REPETIDAS POR EL BARCO: " + tablero.tablero[y][x]);
                lancha = true;
-               System.out.println(x);
-               System.out.println(y);
-               tablero.tablero[y][x] = "1";
            }else{
-               System.out.println("Vuelve a introducir otras coordenadas diferentes a las anteriores");
-               lancha = false;
-           }   
+                if ( x < 10 && y < 10 && x >= 0 && y >= 0 ){
+                    lancha = true;
+                    System.out.println(x);
+                    System.out.println(y);
+                    tablero.tablero[y][x] = "1";
+                }else{
+                    System.out.println("Vuelve a introducir otras coordenadas diferentes a las anteriores");
+                    lancha = false;
+                }
+            }
        }   
    }
    
@@ -260,7 +273,10 @@ public class Barco {
            System.out.print("Dame la coordenada y: ");
            int y = rnd.nextInt(9)+1;
            
-           
+           if (tablero.tablero[y][x] != "~") {
+               System.out.println("COORDENADAS REPETIDAS POR EL BARCO: " + tablero.tablero[y][x]);
+               lancha = true;
+           }else{
            if ( x < 10 && y < 10 && x >= 0 && y >= 0){
                lancha = true;
                System.out.println("Dame la direccion la cual quieres colocarlo H=Horizontal / V=Vertical");
@@ -302,7 +318,8 @@ public class Barco {
            }else{
                System.out.println("Vuelve a introducir otras coordenadas diferentes a las anteriores");
                lancha = false;
-           }   
+           }
+           }
        } 
    }
    
@@ -317,7 +334,10 @@ public class Barco {
            System.out.print("Dame la coordenada y: ");
            int y = rnd.nextInt(9)+1;
            
-           
+           if (tablero.tablero[y][x] != "~") {
+               System.out.println("COORDENADAS REPETIDAS POR EL BARCO: " + tablero.tablero[y][x]);
+               lancha = true;
+           }else{
            if ( x < 10 && y < 10 && x >= 0 && y >= 0){
                lancha = true;
                System.out.println("Dame la direccion la cual quieres colocarlo H=Horizontal / V=Vertical");
@@ -362,7 +382,8 @@ public class Barco {
                System.out.println("Vuelve a introducir otras coordenadas diferentes a las anteriores");
                lancha = false;
            }   
-       } 
+       }
+       }    
    }
    
    public void colocarPortaAvionesEnemigo(Random rnd, Tablero tablero){
@@ -376,7 +397,10 @@ public class Barco {
            System.out.print("Dame la coordenada y: ");
            int y = rnd.nextInt(9)+1;
            
-           
+           if (tablero.tablero[y][x] != "~") {
+               System.out.println("COORDENADAS REPETIDAS POR EL BARCO: " + tablero.tablero[y][x]);
+               lancha = true;
+           }else{
            if ( x < 10 && y < 10 && x >= 0 && y >= 0){
                lancha = true;
                System.out.println("Dame la direccion la cual quieres colocarlo H=Horizontal / V=Vertical");
@@ -423,7 +447,8 @@ public class Barco {
                System.out.println("Vuelve a introducir otras coordenadas diferentes a las anteriores");
                lancha = false;
            }   
-       } 
+       }
+       }    
    }
    
 }

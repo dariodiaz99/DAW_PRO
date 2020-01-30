@@ -20,8 +20,8 @@ public class HundirLaFlota {
      */
     public static void main(String[] args) {
         
-        //Jugador jugador1 = new Jugador();
-        //Jugador jugadorEnemigo = new Jugador();
+        Jugador jugador1 = new Jugador();
+        Jugador jugadorEnemigo = new Jugador();
         
         Barco barco1 = new Barco();
         
@@ -50,7 +50,8 @@ public class HundirLaFlota {
             System.out.println("3. Insertar Submarino (Tamaño / casillas a ocupar 3)");
             System.out.println("4. Insertar Buque (Tamaño / casillas a ocupar 4)");
             System.out.println("5. Insertar PortaAviones (Tamaño / casillas a ocupar 5)");
-            System.out.println("6. Salir");
+            System.out.println("6. Disparar");
+            System.out.println("7. Salir");
  
             try {
  
@@ -131,12 +132,20 @@ public class HundirLaFlota {
                             System.out.print("\n" + "Tablero enemigo" + "\n");
                             barco1.colocarPortaAvionesEnemigo(rnd, tableroEnemigo);
                             tableroEnemigo.mostrarTableroEnemigo();
+                            
                         }else{
                             System.out.println("Solo puedes poner un barco de 5 Casillas");
                         }
                         
                         break;
                     case 6:
+                        jugador1.Disparar(opcion, opcion, tableroEnemigo);
+                        jugadorEnemigo.DisparoEnemigo(opcion, opcion, tablero);
+                        tablero.mostrarTablero();
+                        System.out.println(" ");
+                        tableroEnemigo.mostrarTableroEnemigo();
+                        break;
+                    case 7:
                         salir = true;
                         break;
                     default:
