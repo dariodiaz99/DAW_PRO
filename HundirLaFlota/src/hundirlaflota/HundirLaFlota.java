@@ -45,7 +45,7 @@ public class HundirLaFlota {
             
             System.out.println("Escribe una de las opciones a elegir");
             
-            System.out.println("1. Crear Tableros/Mapas");
+            System.out.println("1. Crear Tablero/Mapas");
             System.out.println("2. Insertar Lancha (Tamaño / casillas a ocupar 1)");
             System.out.println("3. Insertar Submarino (Tamaño / casillas a ocupar 3)");
             System.out.println("4. Insertar Buque (Tamaño / casillas a ocupar 4)");
