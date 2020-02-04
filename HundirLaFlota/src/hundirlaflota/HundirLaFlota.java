@@ -41,6 +41,8 @@ public class HundirLaFlota {
         boolean buquito = false;
         boolean Portamosquitos = false;
         
+        
+        
         while (!salir) { //Mientras sea distinto a salir hacer lo siguiente
             
             System.out.println("Escribe una de las opciones a elegir");
@@ -51,7 +53,8 @@ public class HundirLaFlota {
             System.out.println("4. Insertar Buque (Tamaño / casillas a ocupar 4)");
             System.out.println("5. Insertar PortaAviones (Tamaño / casillas a ocupar 5)");
             System.out.println("6. Disparar");
-            System.out.println("7. Salir");
+            System.out.println("7. Mostrar tableros/mapas");
+            System.out.println("8. Salir");
  
             try {
  
@@ -90,7 +93,6 @@ public class HundirLaFlota {
                             
                             submarinito = true;
                             System.out.println("Has seleccionado el 3");
-                            //FALTA COLOCAR EL BARCO PARA QUE FUNCIONE
                             barco1.colocarSubmarino(sn, tablero);
                             tablero.mostrarTablero();
                         
@@ -109,7 +111,6 @@ public class HundirLaFlota {
                         if (!buquito){
                             buquito = true;
                             System.out.println("Has seleccionado el 4");
-                            //FALTA COLOCAR EL BARCO PARA QUE FUNCIONE
                             barco1.colocarBuque(sn, tablero);
                             tablero.mostrarTablero();
                         
@@ -125,7 +126,6 @@ public class HundirLaFlota {
                             
                             Portamosquitos = true;
                             System.out.println("Has seleccionado el 5");
-                            //FALTA COLOCAR EL BARCO PARA QUE FUNCIONE
                             barco1.colocarPortaAviones(sn, tablero);
                             tablero.mostrarTablero();
                         
@@ -146,6 +146,10 @@ public class HundirLaFlota {
                         tableroEnemigo.mostrarTableroEnemigo();
                         break;
                     case 7:
+                        tablero.mostrarTablero();
+                        tableroEnemigo.mostrarTableroEnemigo();
+                        break;
+                    case 8:
                         salir = true;
                         break;
                     default:

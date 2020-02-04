@@ -281,8 +281,8 @@ public class Barco {
                lancha = true;
                //System.out.println("Dame la direccion la cual quieres colocarlo H=Horizontal / V=Vertical");
                
-               //System.out.println(x);
-               //System.out.println(y);
+               System.out.println(x);
+               System.out.println(y);
                //tablero.tablero[y][x] = "3";
                //String sc = new String();
                String direccion1 = "HV"; 
@@ -342,8 +342,8 @@ public class Barco {
                lancha = true;
                //System.out.println("Dame la direccion la cual quieres colocarlo H=Horizontal / V=Vertical");
                
-               //System.out.println(x);
-               //System.out.println(y);
+               System.out.println(x);
+               System.out.println(y);
                //tablero.tablero[y][x] = "3";
                //String sc = new String();
                String direccion1 = "HV"; 
@@ -405,8 +405,8 @@ public class Barco {
                lancha = true;
                //System.out.println("Dame la direccion la cual quieres colocarlo H=Horizontal / V=Vertical");
                
-               //System.out.println(x);
-               //System.out.println(y);
+               System.out.println(x);
+               System.out.println(y);
                //tablero.tablero[y][x] = "3";
                //String sc = new String();
                String direccion1 = "HV"; 

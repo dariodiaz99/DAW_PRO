@@ -30,7 +30,9 @@ public class Jugador {
     
     public void Disparar(int x, int y, Tablero tablero) {
         boolean repeticion = false;
-
+        
+        
+        
         while (!repeticion) {
             System.out.println("¿Donde quieres disparar?");
             System.out.print("Dame la coordenada X: ");
@@ -56,7 +58,9 @@ public class Jugador {
                 if (saludBarco1 == 0) {
                    System.out.println("Hundido");
                     tablero.tablero[y][x] = "X"; 
+                    System.out.println(saludBarco1);
                 }
+               
                 //System.out.println("Hundido");
                 //tablero.tablero[y][x] = "X";
                 //System.out.print(tablero.tablero[y][x] = "X");
@@ -67,26 +71,29 @@ public class Jugador {
                 
                 if (tablero.tablero[y][x] == "3") {
                     saludBarco3--;
+                    System.out.println(saludBarco3);
                     if(saludBarco3 == 0){
                         System.out.println("Hundido");
                         //tablero.tablero[y][x] = "X";
                     }
                 }else if(tablero.tablero[y][x] == "4"){
                     saludBarco4--;
+                    System.out.println(saludBarco4);
                     if (saludBarco4 == 0) {
                         System.out.println("Hundido");
                     }
                 }else if(tablero.tablero[y][x] == "5"){
                     saludBarco5--;
+                    System.out.println(saludBarco5);
                     if (saludBarco5 == 0) {
                         System.out.println("Hundido");
                     }
                 }
-               
                 //System.out.println(tablero.tablero[y][x] = "*");
 
             }
         }
+        
 
     }
 
@@ -161,6 +168,18 @@ public class Jugador {
         }
 
     }
-
-    //}
+    
+    public void PartidaFinalizada(int x, int y, Tablero tablero) {
+        boolean salud = false;
+        if (!salud){
+            if (saludBarco1 == 0 && saludBarco3 == 0 && saludBarco4 == 0 && saludBarco5 == 0){
+                System.out.println("Barcos del Jugador Hundidos");
+                System.out.println("¡IA GANA!");
+            }else if (saludBarco1Enemigo == 0 && saludBarco3Enemigo == 0 && saludBarco4Enemigo == 0 && saludBarco5Enemigo == 0){
+                System.out.println("Barcos de la IA Hundidos");
+                System.out.println("¡JUGADOR GANA!");
+            }
+        }
+    }
+    
 }
